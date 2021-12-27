@@ -1,0 +1,43 @@
+.alto-1, .alto-2, .alto-3, .alto-4 {
+  height: 200px;
+  background-color: #8fd1ca;
+  align-content: center;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+}
+.alto-1:hover, .alto-2:hover, .alto-3:hover, .alto-4:hover {
+  background-color: #b5d4d1;
+}
+
+.alto-a-1 {
+  color: #222;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.alto-a-2 {
+  color: #4e46b4;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.alto-a-3 {
+  color: #5c357c;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.alto-a-4 {
+  color: #920ecf;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=estilossas.css.map */

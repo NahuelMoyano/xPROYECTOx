@@ -303,7 +303,7 @@ ul li:hover ul{
     width: 100px;
 }
 }
-.alto{
+/* .alto{
     height: 200px;
     background-color: rgb(143, 209, 202);
     align-content: center;
@@ -311,7 +311,7 @@ ul li:hover ul{
 .alto:hover{
     height: 200px;
     background-color: rgb(181, 212, 209);
-}
+} */
 @media screen and (max-width: 768px){
     main{
         min-height: 1000px;
