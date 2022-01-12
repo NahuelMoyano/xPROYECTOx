@@ -209,6 +209,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: linear-gradient(to bottom, rgb(143, 209, 202),rgb(226, 219, 219));
 }
 .bar-btn {
 font-size: 25px;
