@@ -5,22 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEIT/Nosotros</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilossas.css">
+    <script src="https://kit.fontawesome.com/a90613b44b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
                 <li>
                     <a href="../index.html">Inicio</a>
                 </li>
                 <li>
                     <a href="./categorias.html">Categorias</a>
+                    
                 </li>
                 <li>
-                    <a href="./productos.html">Productos</a>
+                    <a href="./preguntas.html">Como Comprar</a>
                 </li>
                 <li>
-                    <a href="./nosotros.html">Nosotrsos</a>
+                    <a href="./nosotros.html">Nosotros</a>
                 </li>
                 <li>
                     <a href="./contacto.html">Contacto</a>
@@ -28,20 +36,29 @@
             </ul>
         </nav>
     </header>
-    <main> <h3>Nosotros</h3>
-    <p>Somos una empresa que nos dedicamos a la comercialización y distribución de 
-        artículos de limpieza, tanto hogareña como institucional</p>
-        <p>Ofrecemos la más amplia variedad de productos combinando excelentes precios y 
-            una inmejorable calidad</p>
-            <p>Brindamos asesoramiento en el uso y aplicación de cada producto y damos una 
-                solución integral a sus requerimientos de limpieza tanto para el hogar, como para 
-                empresas o diferentes instituciones: colegios, consorcios, hoteles, restaurantes, 
-                cervecerías, centros médicos y geriátricos</p>
-                <p>Porque en heit, sabemos de limpieza.</p>
+    <main>
+        <h1 class="text-center py-5 display-5">Nosotros</h1>
+            <div id="texto-nosotros">
+                <p class="text-center container">Somos una empresa que nos dedicamos a la comercialización y distribución de artículos de limpieza, tanto hogareña como institucional</p>
+                <p class="text-center container">Ofrecemos la más amplia variedad de productos combinando excelentes precios y una inmejorable calidad</p>
+                <p class="text-center container">Brindamos asesoramiento en el uso y aplicación de cada producto y damos una solución integral a sus requerimientos de limpieza tanto para el hogar, como para empresas o diferentes instituciones: colegios, consorcios, hoteles, restaurantes, cervecerías, centros médicos y geriátricos</p>
+                <p class="text-center container">Porque en heit, sabemos de limpieza.</p>
+            </div>
+        <div id="grilla-nosotros">
+            <section class="limpieza-1">
+                <img src="../imagenes/limpieza-1.jpg" alt="">
+            </section>
+            <section class="limpieza-2">
+                <img src="../imagenes/limpieza-2.jpg" alt="">
+            </section>
+            <section class="limpieza-3">
+                <img src="../imagenes/limpieza-3.jpg" alt="">
+            </section>
+        </div>
+
     </main>
-    <footer>
-        <hr/>
-        <h3>Copyright 2021 - Todos los derechos reservados. | Diseño Web nahuel moyano</h3>
+    <footer class="footer">
+        <p>Copyright 2021 - Todos los derechos reservados. | Diseño Web nahuel moyano</p>
     </footer>               
 
 </html>

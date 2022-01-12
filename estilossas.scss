@@ -1,0 +1,339 @@
+//mixin
+@mixin categoria() {
+    height: 200px;
+    background-color: rgb(143, 209, 202);
+    align-content: center;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: rgb(181, 212, 209);
+    }
+}
+.alto-1{
+    @include categoria();
+}
+//extend
+.alto-2, .alto-3, .alto-4{
+    @extend.alto-1;
+}
+//map
+$catalogo:(
+    1: #222,
+    2: #222,
+    3: #222,
+    4: #222,
+);
+@each $num, $color in $catalogo {
+    .alto-a-#{$num} {
+        color: $color;
+        text-decoration: none;
+        font-size: 30px;
+        background-color: transparent;
+    }
+}
+
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+main{
+    min-height: 800px;
+    background-color: rgb(226, 219, 219);
+}
+h1,h2 {
+    text-align: center;
+}
+.banner img {
+    width: 100%;
+}
+ul{
+    font-size: 0;
+    ul{
+        position: absolute;
+        display: none;
+        li{
+            display: block;
+        }
+    }
+}
+
+li{
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    font-size: 14px;
+}
+
+.preguntas{
+    h2{
+        margin-top: 15px;
+    }
+    p{
+        margin-bottom: 15px;
+    }
+}
+
+.cuadro-contacto{
+    background-color: rgb(255, 255, 255);
+    //height: 450px;
+    width: 500px;
+    border-radius: 25px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    input{
+        background-color: #D5E4E7;
+        width: 25rem;
+        padding: 10px 0px;
+        margin: 50px 0px;
+    }
+}
+.cubo1{
+    width: 275px;
+    height:auto;
+    padding:10px;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    background-color: grey;
+    p{
+        font-size: 20px;
+    }
+}
+.productos-alineacion{
+    padding: 20px;
+    float: left;
+    display: inline;
+}
+.producto{
+    display: flex;
+    justify-content: center;
+    img{
+        height: 300px;
+        width: 300px;
+    }
+}
+.footer{
+    display: grid;
+    background-image: linear-gradient(to top, rgb(143, 209, 202),rgb(226, 219, 219));
+    height: 50px;
+    margin: 0px;
+    text-align: center;
+    line-height: 50px;
+}
+.subtitulo{
+    grid-area: subtitulo;
+}
+.titulo{
+    grid-area: titulo;
+}
+.banner{
+    grid-area: banner;
+}
+#grilla-categorias{
+    display: grid;
+    grid-template-areas: 
+        "categorias categorias categorias categorias"
+        "vacio accesorios aromatizantes aside"
+        "vacio muebles pisos aside";
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+    overflow: hidden;
+    h4{
+        font-size: 30px;
+    }
+}
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#accesorios{
+    grid-area: accesorios;
+    background-color: rgb(143, 209, 202);
+    padding: 100px 252px;
+    &:hover{
+        background-color: rgb(181, 231, 238);
+        padding: 100px 252px;
+    }
+}
+#aromatizantes{
+    grid-area: aromatizantes;
+    background-color: rgb(143, 209, 202);
+    padding: 100px 217px;
+    &:hover{
+        background-color: rgb(181, 231, 238);
+        padding: 100px 217px;
+    }
+}
+#muebles{
+    grid-area: muebles;
+    background-color: rgb(143, 209, 202);
+    padding: 100px 267px;
+    &:hover{
+        background-color: rgb(181, 231, 238);
+        padding: 100px 267px;
+    }
+}
+#pisos{
+    grid-area: pisos;
+    background-color: rgb(143, 209, 202);
+    padding: 100px 285px;
+    &:hover{
+        background-color: rgb(181, 231, 238);
+        padding: 100px 285px;
+    }
+}
+#vacio{
+    grid-area: vacio;
+}
+/* segunda entrega proyecto final */
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(143, 209, 202),rgb(226, 219, 219));
+}
+.bar-btn {
+font-size: 25px;
+color: floralwhite;
+margin-right: 20px;
+cursor: pointer;
+}
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    text-align: center;
+    transition: all .5s;
+    background-color: rgb(226, 219, 219);
+    li{
+        background-color: rgba(190, 190, 190, 0);
+        display: none;
+        line-height: 30px;
+        margin: 50px 0;
+        transition: all .5s;
+        a{
+            color: gray;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            &:hover{
+                color: black;
+                transition: .3s;
+            }
+        }
+    }
+}
+ul ul li{
+    display: block;
+}
+
+ul li:hover ul{
+    display: block;
+    background-color: rgba(190, 190, 190, 0.616);
+    width: 400px;
+}
+#check{
+    display: none;
+    &:checked ~ .nav-menu{
+        height: 100vh;
+        li{
+            display: block;
+        }
+    }
+}
+/*responsive*/
+@media screen and (min-width: 768px){
+    .logo{
+        margin-left:100px ;
+    }
+nav{
+    height: 100px;
+}
+.bar-btn{
+    display: none;
+}
+.nav-menu{
+    position: relative;
+    height: 100px;
+    top: 0;
+    background:none ;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+    li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+        a{
+            font-size: 12px;
+        }
+    }
+}
+ul ul{
+    position: absolute; 
+    display: none;
+    li{
+        display: block;
+        justify-items: center;
+    }
+}
+
+ul li:hover ul{
+    display: block;
+    background-color: rgba(190, 190, 190, 0.616);
+    width: 100px;
+}
+}
+@media screen and (max-width: 768px){
+    main{
+        min-height: 1000px;
+    }
+}
+//nosotros
+#grilla-nosotros{
+    display: grid;
+    grid-template-areas: 
+        "limpieza-1 limpieza-2 limpieza-3";
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 3fr;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+
+    img{
+        height: 350px;
+        width: auto;
+    }
+}
+.limpieza-1{
+    grid-area: limpieza-1;
+}
+.limpieza-2{
+    grid-area: limpieza-2;
+}
+.limpieza-3{
+    grid-area: limpieza-3;
+}
